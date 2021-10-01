@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Robinson HW3</title>
+    <meta charset="utf-8"/>	
+    <style>
+      body {
+        background-image: url('https://wallpapercave.com/wp/wp6621664.jpg');
+      }
+    </style>
+    <link rel="stylesheet" href="hw3CSS.css" />
+    <link rel="shortcut icon" href="chess-knight-solid.svg" type="image/x-icon"> 
+  </head>
+  <body>
+    <main>
+    <header>
+      <h1>Trace Robinson HW3 Calculators</h1>
+    </header>
+    <section id="mySection">
+    <!-- Below div element id="myDiv" is incorrectly holds every form and is not semantically correct -->
+    <!-- I cannot find a way to fix this without horribly messing up the position of my forms on the page -->
+    <!-- Its an issue with css interacting with postions, margins, but I'm not skilled with CSS enough to fix it -->
+    <!-- Therefore, while its definitely broken, it still works for what I need, and I'm leaving it -->
+      <div id="myDiv">
+      <form id="myForm">
+            <div>
+                <h2>Force Calculator</h2>
+                <p style="color:blue;"><strong>Enter Mass :</strong><input type="text" id="getMassValue" ></p>
+                <p style="color:blue;"><strong>Enter Acceleration :</strong><input type="text" id="getAccelerationValue" ></p>
+                
+                <input type="button" value="Calculate" id="" onclick="forceCalc(this.mass, this.acceleration);"/>
+                
+              </div>
+              <p id="outputForce"> </p>
+        </form>   
+        
+        <div id="myDiv">
+            <form id="myForm">
+                  <div>
+                      <h2>Displacement Calculator</h2>
+                      <p style="color:blue;"><strong>Enter Initial Velocity :</strong><input type="text" id="getVelocityValue" ></p>
+                      <p style="color:blue;"><strong>Enter Time In Seconds :</strong><input type="text" id="getTimeValue" ></p>
+                      <p style="color:blue;"><strong>Enter Acceleration :</strong><input type="text" id="getAccelerationValue2" ></p>
+                      
+                      <input type="button" value="Calculate" id="" onclick="displacementCalc(this.initalVelocity, this.timeInSeconds, this.accelerate);"/>
+                      
+                    </div>
+                    <p id="outputDisplacement"> </p>
+              </form>
+        </div>
+
+        <div id="myDiv">
+            <form id="myForm">
+                  <div>
+                      <!-- Cant find way to handle the imaginary number only produces NaN -->
+                      <h2>Quadratic Calculator</h2>
+                      <p style="color:blue;"><strong>Enter A :</strong><input type="text" id="getAValue" ></p>
+                      <p style="color:blue;"><strong>Enter B :</strong><input type="text" id="getBValue" ></p>
+                      <p style="color:blue;"><strong>Enter C :</strong><input type="text" id="getCValue" ></p>
+                      
+                      <input type="button" value="Calculate" id="" onclick="quadCalc(this.a, this.b, this.c);"/>
+                      
+                    </div>
+                    <p id="outputQuadratic1"> </p>
+                    <p id="outputQuadratic1"> </p>
+              </form>
+        </div>
+
+        <div id="myDiv">
+            <form id="myForm">
+                  <div>
+                      <!-- Im positive my math is correct, but it doesn't provide the answers I would expect -->
+                      <h2>Annuity Calculator</h2>
+                      <p style="color:blue;"><strong>Enter PMT :</strong><input type="text" id="getPMTValue" ></p>
+                      <p style="color:blue;"><strong>Enter Interest Rate :</strong><input type="text" id="getRValue" ></p>
+                      <p style="color:blue;"><strong>Enter Num Periods :</strong><input type="text" id="getNValue" ></p>
+                      
+                      <input type="button" value="Calculate" id="" onclick="pCalc(this.pmt, this.r, this.n);"/>
+                      
+                    </div>
+                    <p id="outputP"> </p>
+              </form>
+        </div>
+    </div>
+
+    
+    <script src="hw3.js"></script>
+    </section>
+    </main>
+    <footer>
+      <p>Copyright Trace Robinson 2021</p>
+    </footer>
+  </body>
+  
+  </html>

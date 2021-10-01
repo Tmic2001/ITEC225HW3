@@ -1,0 +1,21 @@
+header {
+    margin-left: 3%;
+}
+
+#myForm {
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    padding: 5px;
+    background-color: white;
+}
+
+#mySection {
+    position: absolute;
+    width: 30%;
+    height: 50%;
+    margin: 0 auto;
+}
+
+
+
